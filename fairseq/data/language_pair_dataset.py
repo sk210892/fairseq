@@ -141,4 +141,4 @@ class LanguagePairDataset(FairseqDataset):
             return self.max_source_positions, self.max_target_positions
         assert len(max_positions) == 2
         max_src_pos, max_tgt_pos = max_positions
-        return min(self.max_source_positions, max_src_pos), min(self.max_target_positions, max_tgt_pos)
+        return max_src_pos, max_tgt_pos
